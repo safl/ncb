@@ -30,9 +30,10 @@ int main(int argc, char *argv[])
 		return 1;
 	}
 
-	cmd.opcode = 0x1;
+	// Construct the command bits here
+	cmd.opcode = NVM_DOPC_SCALAR_READ;
 	cmd.nsid = 1;
-	cmd.nvme.naddrs = 4;
+	cmd.nvme.naddrs = 3;
 
 	if (dump(&cmd, argv[1])) {
 		perror("dump");

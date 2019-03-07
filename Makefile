@@ -1,7 +1,7 @@
 BUILD_DIR?=build
 NCMD_FPATH=$(BUILD_DIR)/your.ncmd
-SRC=nncb.c
-BIN=$(BUILD_DIR)/nncb
+SRC=ncb.c
+BIN=$(BUILD_DIR)/ncb
 
 all: clean build run inspect
 	@echo "# DONE"

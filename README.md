@@ -6,15 +6,16 @@ random sequence of bits, or literally whatever you might want to do.
 
 The 64 bytes defining the NVMe command is given to the CLI tool as a path to a
 binary file. Since flipping those bits by hand is a bit cumbersome then this
-tool lets you assign the various bits and bytes and dumps the command to file.
+tool lets you assign the various bits and bytes, via the C definition, and dumps
+the command to file.
 
 It requires a C compiler, the `xxd` tool, and the liblightnvm headers installed
 on your system.
 
 # Usage
 
-Open `nncb.c` with your favorite editor. Assign values as you see fit to the,
-the NVMe command, that is, the variable named `cmd`.
+Open `ncb.c` with your favorite editor. Assign values as you see fit to the NVMe
+command, that is, the variable named `cmd`.
 
 Then run:
 
@@ -30,8 +31,8 @@ structure to the file `build/your.ncmd`. Prints it out with `xxd`.
 ```
 make
 # Cleaning build
-# Building nncb.c
-# Running build/nncb
+# Building ncb.c
+# Running build/ncb
 # Inspecting build/your.ncmd
 00000000: 00000001 00000000 00000000 00000000  ....
 00000004: 00000001 00000000 00000000 00000000  ....
